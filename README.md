@@ -43,9 +43,9 @@ Try to produce something that is at least minimally functional. Part of the exer
 
 
 
-#Features
+### Features
 
-**Below features available in this service.**
+## Below features available in this service
 
 1. User Management API to register new users.
 2. Authenticate users using JWT.
@@ -58,7 +58,7 @@ Try to produce something that is at least minimally functional. Part of the exer
 9. Get All notes for the users without authentication.
 
 
-**Building and Running Instructions**
+### Building and Running Instructions
 
 Solution is implemented in Java. Hence, to build and run it one need to have Java8 installed. Optionally, you can have Maven installed. Maven Wrapper is checked in into repo, if you don't have maven you can use it.
 
