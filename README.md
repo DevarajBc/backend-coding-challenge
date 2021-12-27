@@ -62,6 +62,8 @@ Try to produce something that is at least minimally functional. Part of the exer
 
 Solution is implemented in Java. Hence, to build and run it one need to have Java8 installed. Optionally, you can have Maven installed. Maven Wrapper is checked in into repo, if you don't have maven you can use it.
 
+In memory DB - H2 database is used to persist the data. 
+
 Before running app, ensure that port 8080 is free. One can use server.port system property to override default 8080 port
 
 Go into repo root and run:
