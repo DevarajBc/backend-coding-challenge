@@ -72,9 +72,9 @@ Go into repo root and run:
 
 1. All the apis will be authenticated using JWT token and user session token.
 2. Authenticate API has to be called before calling any API to get the JWT token
-3. Once the Authenticate API call is successful, pass the JWT token as part of API header to access other APIs.
+3. Once the Authenticate API call is successful, pass the JWT token as part of API header to access other APIs. Standard user credentials being used to generate JWT token
 4. User registration will be done using registration API call.
-5. Post registration call is successful , User login API to be called which generated generates session token, this session token has to be passed as part of usercontext to access subsequent APIs. This ensures that, user has to be logged in to access other API's.
+5. Post registration call is successful , User login API to be called which  generates session token, this session token has to be passed as part of usercontext to access subsequent APIs. This ensures that, user has to be logged in to access other API's.
 6. getAllNotes API is excluded from authentication and user session token validation as mentioned in the requirement.
 
 
