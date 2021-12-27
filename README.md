@@ -38,3 +38,21 @@ Try to produce something that is at least minimally functional. Part of the exer
 |--|--|--|
 | Python & Django | Yes | [Repository →](https://github.com/Thermondo/backend-coding-challenge-django) 
 | Kotlin & Ktor | Yes | [Repository →](https://github.com/Thermondo/backend-coding-challenge-ktor)
+
+
+
+Features
+
+This features available in this service.
+
+1. User Management API to register new users.
+2. Authenticate users using JWT.
+3. User login session management.
+4. Create Notes API for the users.
+5. Update Notes API for the users.
+6. Delete Notes API for the users.
+7. Get Notes API for the users.
+8. Get Notes API based on the tags for the users.
+9. Get All notes for the users without authentication.
+
+
