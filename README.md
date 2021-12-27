@@ -43,9 +43,9 @@ Try to produce something that is at least minimally functional. Part of the exer
 
 
 
-### Features
+## Features
 
-## Below features available in this service
+### Below features available in this service
 
 1. User Management API to register new users.
 2. Authenticate users using JWT.
