@@ -1,23 +1,14 @@
 package com.thermondo.notetakingapp.controller;
 
 import com.thermondo.notetakingapp.exception.InvalidUserSessionException;
-import com.thermondo.notetakingapp.exception.ResourceNotFoundException;
 import com.thermondo.notetakingapp.model.UserContext;
 import com.thermondo.notetakingapp.model.entities.Note;
-import com.thermondo.notetakingapp.model.entities.Session;
-import com.thermondo.notetakingapp.model.entities.User;
-import com.thermondo.notetakingapp.repository.NoteRepository;
-import com.thermondo.notetakingapp.repository.SessionRepository;
+import com.thermondo.notetakingapp.service.CustomizedNotesServiceImpl;
 import com.thermondo.notetakingapp.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -26,6 +17,8 @@ public class NoteApp {
     @Autowired
     NoteService noteService;
 
+    @Autowired
+    CustomizedNotesServiceImpl customizedNotesService;
 
     /**
      *
@@ -94,6 +87,16 @@ public class NoteApp {
     public List<Note> retrieveByTag(@PathVariable(value = "tag") String tag) {
         // Get notes for a tag.
         return noteService.retrieveByTag(tag);
+    }
+
+    /**
+     *
+     * @param keyword
+     * @return
+     */
+    @GetMapping("/notes/keywords/{keyword}")
+    public List<Note> retrieveNotesByKeyword(@PathVariable(value = "keyword") String keyword) {
+        return customizedNotesService.search(keyword);
     }
 
 }
