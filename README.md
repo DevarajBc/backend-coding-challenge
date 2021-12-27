@@ -41,9 +41,9 @@ Try to produce something that is at least minimally functional. Part of the exer
 
 
 
-Features
+**Features**
 
-This features available in this service.
+**Below features available in this service.**
 
 1. User Management API to register new users.
 2. Authenticate users using JWT.
@@ -56,3 +56,12 @@ This features available in this service.
 9. Get All notes for the users without authentication.
 
 
+**Building and Running Instructions**
+
+Solution is implemented in Java. Hence, to build and run it one need to have Java8 installed. Optionally, you can have Maven installed. Maven Wrapper is checked in into repo, if you don't have maven you can use it.
+
+Before running app, ensure that port 8080 is free. One can use server.port system property to override default 8080 port
+
+Go into repo root and run:
+
+./mvnw spring-boot:run
