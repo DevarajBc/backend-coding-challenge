@@ -67,3 +67,24 @@ Before running app, ensure that port 8080 is free. One can use server.port syste
 Go into repo root and run:
 
 ./mvnw spring-boot:run
+
+1. All the apis will be authenticated using JWT token and user session token.
+2. Authenticate API has to be called before calling any API to get the JWT token
+3. Once the Authenticate API call is successful, pass the JWT token as part of API header to access other APIs.
+4. User registration will be done registration API call.
+5. Post registration, User login API to be called which generated generates session token, this session token has to be passed as part of usercontext to access subsequent APIs. This ensures that, user has to be logged in to access other API's.
+6. getAllNotes API is excluded from authentication and user session token validation as mentioned in the requirement.
+
+
+### Below are the different API end points created and purpose.
+
+1. /authenticate - to generate JWT token
+2. /user/register - to register the user
+3. /user/login - to login the user
+4. /api/notes/all - to find all the notes in the system without authentication and user session.
+5. /notes - Create a new note for the user
+6. /notes - Get all the notes for the user.
+7. /notes - Update notes belong to the user.
+8. /notes - Delete notes belong to the user.
+9. /notes/tag/{tag} - to retrieve all the notes for the given tag.
+10. /notes/keyword/{keyword} - search all the notes for the given keyword.
